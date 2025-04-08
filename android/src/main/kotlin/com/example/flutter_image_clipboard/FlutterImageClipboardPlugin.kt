@@ -70,7 +70,7 @@ class FlutterImageClipboardPlugin: FlutterPlugin, MethodCallHandler {
         val fos = FileOutputStream(file)
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
         fos.close()
-        return FileProvider.getUriForFile(applicationContext, "${applicationContext.packageName}.fileprovider", file)
+        return FileProvider.getUriForFile(applicationContext, "${applicationContext.packageName}.fileProvider", file)
     }
 
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
